@@ -79,7 +79,7 @@ export const globalDefaults = {
 
   // rerenderDelay: null,
 
-  eventLimit: false,
+  eventLimit: false, // CheckPoint
   eventLimitClick: 'popover',
   dayPopoverFormat: { month: 'long', day: 'numeric', year: 'numeric' },
 

@@ -15,8 +15,9 @@
     var calendar = new FullCalendar.Calendar(calendarEl, {
       plugins: [ 'interaction', 'dayGrid' ],
       defaultDate: '2019-06-12',
-      editable: true,
+      editable: 4,
       eventLimit: true, // allow "more" link when too many events
+      eventLimitClick: 'extend',
       events: [
         {
           title: 'All Day Event',
@@ -71,6 +72,62 @@
           title: 'Click for Google',
           url: 'http://google.com/',
           start: '2019-06-28'
+        },
+        {
+          title: 'All Day Event',
+          start: '2019-06-18'
+        },
+        {
+          title: 'All Day Event',
+          start: '2019-06-18'
+        },
+        {
+          title: 'All Day Event',
+          start: '2019-06-18'
+        },
+        {
+          title: 'All Day Event',
+          start: '2019-06-18'
+        },
+        {
+          title: 'All Day Event',
+          start: '2019-06-18'
+        },
+        {
+          title: 'All Day Event',
+          start: '2019-06-14'
+        },
+        {
+          title: 'All Day Event',
+          start: '2019-06-14'
+        },
+        {
+          title: 'All Day Event',
+          start: '2019-06-14'
+        },
+        {
+          title: 'All Day Event',
+          start: '2019-06-14'
+        },
+        {
+          title: 'All Day Event',
+          start: '2019-06-14'
+        },
+        {
+          title: 'All Day Event',
+          start: '2019-06-14'
+        },
+        {
+          title: 'All Day Event',
+          start: '2019-06-14'
+        },
+        {
+          title: 'All Day Event',
+          start: '2019-06-14'
+        },
+        {
+          title: 'All Day Event',
+          start: '2019-06-14'
         }
       ]
     });

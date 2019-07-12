@@ -741,7 +741,14 @@ export default class DayGrid extends DateComponent<DayGridProps> {
 
       if (clickOption === 'popover') {
         this.showSegPopover(row, col, moreEl, reslicedAllSegs)
-      } else if (typeof clickOption === 'string') { // a view name
+      } 
+
+      //for testing byTae
+      else if (clickOption === 'extend') {
+        this.unlimitRow(row)
+      }
+
+      else if (typeof clickOption === 'string') { // a view name
         view.calendar.zoomTo(date, clickOption)
       }
     })

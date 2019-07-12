@@ -122,7 +122,7 @@ export default abstract class DayGridView extends View {
 
   // Determines whether each row should have a constant height
   hasRigidRows() {
-    let eventLimit = this.opt('eventLimit')
+    let eventLimit = this.opt('eventLimit') // UltimateCheckPoint
 
     return eventLimit && typeof eventLimit !== 'number'
   }

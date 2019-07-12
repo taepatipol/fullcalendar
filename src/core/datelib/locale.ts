@@ -45,7 +45,7 @@ const RAW_EN_LOCALE = {
   },
   weekLabel: 'W',
   allDayText: 'all-day',
-  eventLimitText: 'more',
+  eventLimitText: 'more', // CheckPoint
   noEventsMessage: 'No events to display'
 }
 

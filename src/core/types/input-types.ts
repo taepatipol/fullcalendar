@@ -110,7 +110,7 @@ export interface OptionsInputBase {
   aspectRatio?: number
   handleWindowResize?: boolean
   windowResizeDelay?: number
-  eventLimit?: boolean | number
+  eventLimit?: boolean | number // CheckPoint
   eventLimitClick?: 'popover' | 'week' | 'day' | 'timeGridWeek' | 'timeGridDay' | string |
     ((arg: { date: Date, allDay: boolean, dayEl: HTMLElement, moreEl: HTMLElement, segs: any[], hiddenSegs: any[], jsEvent: MouseEvent, view: View }) => void),
   timeZone?: string | boolean

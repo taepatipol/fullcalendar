@@ -746,6 +746,8 @@ export default class DayGrid extends DateComponent<DayGridProps> {
       //for testing byTae
       else if (clickOption === 'extend') {
         this.unlimitRow(row)
+        let rowsEles = document.getElementsByClassName('fc-row fc-week fc-widget-content')
+        rowsEles[row].className = 'fc-row fc-week fc-widget-content extended'
       }
 
       else if (typeof clickOption === 'string') { // a view name

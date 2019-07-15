@@ -30,3 +30,8 @@ renderDayRowHtml(row, isRigid)
 
 //////
  unlimitRow(row)
+
+
+ ////
+ problem now
+ -> not work with drag -> if drag it will return to collapsed

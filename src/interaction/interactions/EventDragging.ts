@@ -152,6 +152,7 @@ export default class EventDragging extends Interaction { // TODO: rename to Even
         initialCalendar === receivingCalendar ||
         receivingComponent.opt('editable') && receivingComponent.opt('droppable')
       ) {
+
         mutation = computeEventMutation(initialHit, hit, receivingCalendar.pluginSystem.hooks.eventDragMutationMassagers)
 
         if (mutation) {
@@ -236,7 +237,7 @@ export default class EventDragging extends Interaction { // TODO: rename to Even
       if (this.validMutation) {
 
         // dropped within same calendar
-        if (receivingCalendar === initialCalendar) {
+        if (receivingCalendar === initialCalendar) { //byTae
 
           initialCalendar.dispatch({
             type: 'MERGE_EVENTS',

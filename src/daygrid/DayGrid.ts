@@ -31,6 +31,8 @@ import DayBgRow from './DayBgRow'
 const DAY_NUM_FORMAT = createFormatter({ day: 'numeric' })
 const WEEK_NUM_FORMAT = createFormatter({ week: 'numeric' })
 
+let extendedRows = []
+
 
 /* A component that renders a grid of whole-days that runs horizontally. There can be multiple rows, one per week.
 ----------------------------------------------------------------------------------------------------------------------*/
@@ -745,9 +747,10 @@ export default class DayGrid extends DateComponent<DayGridProps> {
 
       //for testing byTae
       else if (clickOption === 'extend') {
+        extendedRows.push(row)
         this.unlimitRow(row)
-        let rowsEles = document.getElementsByClassName('fc-row fc-week fc-widget-content')
-        rowsEles[row].className = 'fc-row fc-week fc-widget-content extended'
+        // let rowsEles = document.getElementsByClassName('fc-row fc-week fc-widget-content')
+        // rowsEles[row].className = 'fc-row fc-week fc-widget-content extended'
       }
 
       else if (typeof clickOption === 'string') { // a view name

@@ -237,7 +237,7 @@ export default class EventDragging extends Interaction { // TODO: rename to Even
       if (this.validMutation) {
 
         // dropped within same calendar
-        if (receivingCalendar === initialCalendar) { //byTae
+        if (receivingCalendar === initialCalendar) {
 
           initialCalendar.dispatch({
             type: 'MERGE_EVENTS',

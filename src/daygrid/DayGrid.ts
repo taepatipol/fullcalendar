@@ -271,9 +271,9 @@ export default class DayGrid extends DateComponent<DayGridProps> {
   // `row` is the row number.
   renderDayRowHtml(row, isRigid) {
     let { theme } = this
-    let classes = [ 'fc-row', 'fc-week', theme.getClass('dayRow') ]
+    let classes = ['extended','fc-row', 'fc-week', theme.getClass('dayRow') ] //added extended byTae
 
-    if (isRigid) {
+    if (isRigid && !(this.opt('eventLimitClick') === 'extend')) {
       classes.push('fc-rigid')
     }
 
@@ -751,8 +751,11 @@ export default class DayGrid extends DateComponent<DayGridProps> {
       else if (clickOption === 'extend') {
         extendedRows.push(row)
         this.unlimitRow(row)
-        // let rowsEles = document.getElementsByClassName('fc-row fc-week fc-widget-content')
-        // rowsEles[row].className = 'fc-row fc-week fc-widget-content extended'
+        let rowsEles = document.getElementsByClassName('fc-row fc-week fc-widget-content')
+        rowsEles[row].className = 'fc-row fc-week fc-widget-content extended'
+        if (Array.isArray(this.opt('eventLimit'))) {
+          this.opt('eventLimit')[row] = false
+        }
         
       }
 

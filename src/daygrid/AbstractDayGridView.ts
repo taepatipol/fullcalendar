@@ -182,6 +182,11 @@ export default abstract class DayGridView extends View {
     scrollerHeight = this.computeScrollerHeight(viewHeight)
     this.setGridHeight(scrollerHeight, isAuto)
 
+    // byTae
+    if (eventLimit && Array.isArray(eventLimit)) {
+      dayGrid.limitRows(eventLimit)
+    }
+
     // is the event limit dynamically calculated?
     if (eventLimit && typeof eventLimit !== 'number') {
       dayGrid.limitRows(eventLimit) // limit the levels after the grid's row heights have been set

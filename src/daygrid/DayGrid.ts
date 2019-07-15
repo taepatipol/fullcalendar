@@ -552,6 +552,8 @@ export default class DayGrid extends DateComponent<DayGridProps> {
         rowLevelLimit = false
       } else if (typeof levelLimit === 'number') {
         rowLevelLimit = levelLimit
+      } else if (Array.isArray(levelLimit)) { //added byTae
+        rowLevelLimit = levelLimit[row]
       } else {
         rowLevelLimit = this.computeRowLevelLimit(row)
       }
@@ -751,6 +753,7 @@ export default class DayGrid extends DateComponent<DayGridProps> {
         this.unlimitRow(row)
         // let rowsEles = document.getElementsByClassName('fc-row fc-week fc-widget-content')
         // rowsEles[row].className = 'fc-row fc-week fc-widget-content extended'
+        
       }
 
       else if (typeof clickOption === 'string') { // a view name
